@@ -1,0 +1,9 @@
+"*":
+  core:
+    audioBeep: false
+    autoHideMenuBar: true
+    telemetryConsent: "no"
+  editor: {}
+  "exception-reporting":
+    userId: "6662d546-9ce1-268e-b5c1-19b28ca46757"
+  minimap: {}
