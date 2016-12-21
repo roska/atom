@@ -32,7 +32,7 @@
     .module('$1')
     .component('$2', {
         controller: '$3Controller',
-        templateUrl: '$4/$5/$5.template.html'
+        templateUrl: '$4/components/$5/$5.template.html'
     });
     """
 
@@ -47,7 +47,7 @@
           $3: '$4',
         },
         controller: '$5Controller',
-        templateUrl: '$6'
+        templateUrl: '$6/components/$7/$7.template.html'
     });
     """
 
@@ -71,5 +71,20 @@
     'prefix': 'log'
     'body': "console.log('$1');$2"
 
-
 # JavaScript snippets end
+
+
+# Html snippets
+'.text.html':
+
+  # Angular Material snippets
+
+  # md-input snippet
+  'md-input snippet':
+    'prefix': 'mdinput'
+    'body': """
+    <md-input-container>
+    	<label>$1</label>
+    	<input type="$2" name="" ng-model="$3" ng-model-options="{ debounce: 300 }">
+    </md-input-container>
+    """
