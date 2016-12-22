@@ -61,15 +61,35 @@
 
     function $2Controller() {
         var vm = this;
+
         $3
 
     }
     """
 
-    # Console log snippet
+  # $onChanges()
+  'vm.$onChanges() in ngController':
+    'prefix': 'ngonc'
+    'body': """
+    // Watch for changes in bindings
+    vm.$onChanges = function(obj) {
+      if ('$1' in obj) {
+        if (obj.$1.currentValue !== 'undefined') {
+          $2
+        }
+      }
+    }
+    """
+
+
+# Vanilla JavaScript snippets
+
+  # Console log snippet
   'Console log':
-    'prefix': 'log'
+    'prefix': 'cl'
     'body': "console.log('$1');$2"
+
+
 
 # JavaScript snippets end
 
