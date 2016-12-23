@@ -67,6 +67,28 @@
     }
     """
 
+  # Service
+  'ng Service':
+    'prefix': 'ngs'
+    'body': """
+    angular
+    .module('$1')
+    .factory('$2Service', [$3 $2Service]);
+
+    function $2Service() {
+      // Exposed api and shared variables
+      var service = {
+        $4
+      };
+
+      $5
+
+      return service;
+    }
+    """
+
+
+
   # $onChanges()
   'vm.$onChanges() in ngController':
     'prefix': 'ngonc'
@@ -89,6 +111,19 @@
     'prefix': 'cl'
     'body': "console.log('$1');$2"
 
+  # Function with comments
+  'JavaScript function':
+    'prefix': 'fn'
+    'body' : """
+    /*
+     * $1
+     *
+     * $2
+     */
+     function $1($3) {
+       $4
+     }
+    """
 
 
 # JavaScript snippets end
