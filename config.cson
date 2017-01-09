@@ -7,6 +7,9 @@
     scrollPastEnd: true
   "exception-reporting":
     userId: "6662d546-9ce1-268e-b5c1-19b28ca46757"
+  "git-blame":
+    columnWidth: 250
+    showOnlyLastNames: false
   minimap:
     plugins:
       cursorline: true
