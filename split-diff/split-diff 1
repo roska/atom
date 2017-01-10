@@ -1,0 +1,122 @@
+<div layout="column" class="full-height">
+    <md-sidenav
+        flex
+        class="md-primary md-sidenav-left "
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-sm')"
+        md-whiteframe="4"
+		md-colors="{ background: '{{$ctrl.theme}}-primary-400' }"
+        >
+	<!-- Title -->
+	<md-toolbar class="sidenav-top" style="padding-right:15px;">
+
+		<div class="sidenav-logo">
+			<!--<img style="height: 50px" ng-src="http://latausjarjestelma.fi.cloudplatform.fi/assets/images/plugit_light.png" />-->
+			<!--<img style="height: 100px; width: 200px;" ng-src="http://kesko.plugittesti.com:8080/files/keskoev_dark.png" />-->
+			<img style="height: 100px; width: 200px;" ng-src="{{ $ctrl.logo }}" />
+		</div>
+
+
+		<div layout="row" style="margin-top: 0px; padding-bottom: 25px;">
+			
+			<!--<img ng-src="http://plugit.fi/Plugit?action=getContent&type=image&id=1174" style="object-fit:cover; vertical-align:middle; height:45; width:45; border-radius: 150px;" />-->
+			<i class="mdi mdi-account-circle" style="font-size: 40px; vertical-align: middle;"></i>
+			<span style="font-size: 16px; margin-left: 10px; margin-top:0px;  margin-bottom:10px;">{{ $ctrl.user.username }}</span>
+		</div>
+		<!-- TODO: User info here in expandable list -->
+	</md-toolbar>
+
+	<!-- Links -->
+	<md-list class="links">
+		<md-divider></md-divider>
+		<md-item>
+			<a ui-sref="normal.home" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-view-dashboard"></i> Dashboard
+				</md-item-content>
+			</a>
+		</md-item>
+		<md-item>
+			<!-- TODO: get id from user service -->
+			<a ui-sref="normal.report({ target: 'companies', id: $ctrl.companyid })" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-chart-line"></i> {{ $ctrl.translations.raport }}
+				</md-item-content>
+			</a>
+		</md-item>
+		<md-item>
+			<a ui-sref="normal.chargepoints" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-map-marker"></i> {{ $ctrl.translations.chargepoints }}
+				</md-item-content>
+			</a>
+		</md-item>
+		<md-item ng-if="$ctrl.isAdmin">
+			<a ui-sref="normal.user_list" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-account-multiple"></i> {{ $ctrl.translations.all_users }}
+				</md-item-content>
+			</a>
+		</md-item>
+		<md-item>
+			<a ui-sref="normal.map" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-map"></i> {{ $ctrl.translations.map }}
+				</md-item-content>
+			</a>
+		</md-item>
+		<!--
+		<md-item>
+			<a ui-sref="normal.home" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-information"></i> Guides
+				</md-item-content>
+			</a>
+		</md-item>
+		-->
+		<md-item>
+			<a ui-sref="normal.user_profile({ id: {{ $ctrl.user.id }} })" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-account"></i> {{ $ctrl.translations.general_my_profile }}
+				</md-item-content>
+			</a>
+		</md-item>
+		
+		<md-divider></md-divider>
+
+		<md-item ng-if="$ctrl.isAdmin">
+			<a ui-sref="normal.maintenance" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-alert"></i> {{ $ctrl.translations.general_status_maintenance }}
+				</md-item-content>
+			</a>
+		</md-item>
+		<!--
+		<md-item>
+			<a href="app/#/admin" md-button ng-click="$ctrl.closeSidenav()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-settings"></i> Admin
+				</md-item-content>
+			</a>
+		</md-item>
+		-->
+		<md-item>
+			<a href="app/#/login" md-button  ng-click="$ctrl.logout()">
+				<md-item-content  layout="row" layout-align="start center">
+					<i class="mdi mdi-logout"></i> {{ $ctrl.translations.general_logout }}
+				</md-item-content>
+			</a>
+		</md-item>
+	</md-list>
+
+    </md-sidenav>
+</div>
+
+<style>
+.sidenav-logo {
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+
+}
+</style>
