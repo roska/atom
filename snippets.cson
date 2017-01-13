@@ -88,6 +88,51 @@
     """
 
 
+  # Filter
+  'ng Filter':
+    'prefix': 'ngf'
+    'body': """
+    angular
+    .module('$1')
+    .filter('$2', [$2]);
+
+    function $2() {
+      return function(items, search) {
+        if (typeof(items) !== 'undefined' && typeof(search) !== 'undefined') {
+          var filtered = [];
+
+          // Loop items
+          for (let i = 0; i < items.length; i++) {
+            let item = items[i];
+
+            // Search by $3 variable
+            if (typeof(search.$3) !== 'undefined') {
+
+              $4
+              // Basic string search
+              if (item.name.toLowerCase().indexOf(search.name.toLowerCase()) >= 0) {
+  							push = true;
+  						}
+
+            }
+
+
+            // Finally, if any of the search criteria are met and the item should be returned.
+  					if (push) {
+  						filtered.push(item);
+  					}
+
+          }
+
+          return filtered;
+        } else {
+          return items;
+        }
+      }
+    }
+    """
+
+
 
   # $onChanges()
   'vm.$onChanges() in ngController':
