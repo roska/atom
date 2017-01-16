@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
+        "raw": "/tmp/d-117016-25380-zm7a7n/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
-        "spec": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
+        "rawSpec": "/tmp/d-117016-25380-zm7a7n/package.tgz",
+        "spec": "/tmp/d-117016-25380-zm7a7n/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161121-9066-u71h5m"
+      "/tmp/apm-install-dir-117016-25380-1gjoh7x"
     ]
   ],
-  "_from": "../d-1161121-9066-iu9zqj/package.tgz",
-  "_id": "highlight-line@0.11.1",
+  "_from": "../d-117016-25380-zm7a7n/package.tgz",
+  "_id": "highlight-line@0.11.2",
   "_inCache": true,
   "_installable": true,
   "_location": "/highlight-line",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
+    "raw": "/tmp/d-117016-25380-zm7a7n/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
-    "spec": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
+    "rawSpec": "/tmp/d-117016-25380-zm7a7n/package.tgz",
+    "spec": "/tmp/d-117016-25380-zm7a7n/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161121-9066-iu9zqj/package.tgz",
-  "_shasum": "78f4f3c684f3378e783345bb319bdc66be49814d",
+  "_resolved": "file:../d-117016-25380-zm7a7n/package.tgz",
+  "_shasum": "1bf109cfaa718ae8c7c9317e071a9dc6e4e9fd57",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161121-9066-iu9zqj/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161121-9066-u71h5m",
+  "_spec": "/tmp/d-117016-25380-zm7a7n/package.tgz",
+  "_where": "/tmp/apm-install-dir-117016-25380-1gjoh7x",
   "bugs": {
     "url": "https://github.com/richrace/highlight-line/issues"
   },
@@ -60,5 +60,5 @@
     "type": "git",
     "url": "git+https://github.com/richrace/highlight-line.git"
   },
-  "version": "0.11.1"
+  "version": "0.11.2"
 }

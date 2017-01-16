@@ -1,8 +1,9 @@
 "*":
   "atom-material-ui":
     colors:
-      abaseColor: "#13d9c7"
+      abaseColor: "#44f0f2"
       accentColor: "#fb3802"
+      paintCursor: true
     tabs:
       compactTabs: true
       noTabMinWidth: true
